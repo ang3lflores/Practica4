@@ -71,7 +71,7 @@ extern void readString(char UART0_Sring[], char delimitador)
 {
 
    int i=0;
-//   char string [20]; //= (char *)calloc(10,sizeof(char));
+   char string [20]; //= (char *)calloc(10,sizeof(char));
    char c = readChar();
    while(c != delimitador)
    {

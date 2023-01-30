@@ -28,14 +28,14 @@
 ; <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ;
 ;******************************************************************************
-Stack   EQU     0x0008000
+Stack   EQU     0x00000100
 
 ;******************************************************************************
 ;
 ; <o> Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ;
 ;******************************************************************************
-Heap    EQU     0x00000100
+Heap    EQU     0x00000000
 
 ;******************************************************************************
 ;
@@ -99,7 +99,7 @@ __Vectors
         DCD     IntDefaultHandler           ; GPIO Port A
         DCD     IntDefaultHandler           ; GPIO Port B
         DCD     IntDefaultHandler           ; GPIO Port C
-        DCD     IntDefaultHandler           ; GPIO Port D
+        DCD     GPIOD_boton                 ; GPIO Port D
         DCD     IntDefaultHandler           ; GPIO Port E
         DCD     IntDefaultHandler           ; UART0 Rx and Tx
         DCD     IntDefaultHandler           ; UART1 Rx and Tx

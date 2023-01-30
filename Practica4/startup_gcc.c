@@ -41,8 +41,8 @@ static void IntDefaultHandler(void);
 // The entry point for the application.
 //
 //*****************************************************************************
-
-extern void GPIOD_INT_ISR(void); 
+extern int main(void);
+extern void GPIOD_boton(void); 
 
 //*****************************************************************************
 //
@@ -80,7 +80,7 @@ void (* const g_pfnVectors[])(void) =
     IntDefaultHandler,                      // GPIO Port A
     IntDefaultHandler,                      // GPIO Port B
     IntDefaultHandler,                      // GPIO Port C
-    GPIOD_INT_ISR,                       // GPIO Port D
+    GPIOD_boton,                            // GPIO Port D
     IntDefaultHandler,                      // GPIO Port E
     IntDefaultHandler,                      // UART0 Rx and Tx
     IntDefaultHandler,                      // UART1 Rx and Tx
